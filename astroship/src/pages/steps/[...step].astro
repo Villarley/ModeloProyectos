@@ -1,0 +1,53 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Container from "@components/container.astro";
+import Sectionhead from "@components/sectionhead.astro";
+export async function getStaticPaths() {
+  const pages = [
+      {
+          step: "Informar",
+          title: "Informar",
+          text: "Tenemos muchos productos para ti",
+    },
+    {
+        step: "Planificar",
+      title: "Planificar",
+      text: "Si quieres aprender sobre Astro, debes leer este libro.",
+    },
+    {
+        step: "Decidir",
+        title: "Decidir",
+        text: "Si quieres aprender sobre Astro, debes leer este libro.",
+    },
+    {
+        step: "Realizar",
+        title: "Realizar",
+        text: "Si quieres aprender sobre Astro, debes leer este libro.",
+    },
+    {
+        step: "Controlar",
+        title: "Controlar",
+        text: "Si quieres aprender sobre Astro, debes leer este libro.",
+    },
+    {
+      step: "Valorar",
+      title: "Valorar",
+      text: "¡Te damos la bienvenida a la tienda de Astro!",
+    },
+];
+return pages.map(({ step, title, text }) => {
+    return {
+      params: { step },
+      props: { title, text },
+    };
+  });
+}
+const { title, text } = Astro.props;
+---
+    
+    <Layout>
+        <Sectionhead>
+            <Fragment slot="title">{title}</Fragment>
+            <Fragment slot="desc">{text}</Fragment>
+          </Sectionhead>
+    </Layout>
