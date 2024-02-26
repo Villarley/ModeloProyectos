@@ -4,37 +4,43 @@ import { Icon } from "astro-icon";
 
 const features = [
 {
-  title: "Informar",
+  title: "1. Informar",
+  link:"Informar",
   description:
-  "Recopilar todos los datos necesarios.",
+  "Recopilar todos los datos necesarios para poder tener gran variedad de posibilidades.",
   icon: "bx:bxs-briefcase",
 },
 {
-  title: "Planificar",
+  title: "2. Planificar",
+  link:"Planificar",
   description:
   "Paso fundamental para el éxito del proyecto, se elabora un plan para el proyecto.",
   icon: "bx:bxs-window-alt",
 },
 {
-  title: "Decidir",
+  title: "3. Decidir",
+  link:"Decidir",
   description:
   "En este momento basado en la información recopilada y el plan se escogen estrategias para llevar a cabo el plan.",
   icon: "bx:bxs-data",
 },
 {
-  title: "Realizar",
+  title: "4. Ejecutar",
+  link:"Ejecutar",
   description:
   "En este paso se lleva a cabo el plan, en donde pueden surgir cambios dependiendo de las necesidades.",
   icon: "bx:bxs-bot",
 },
 {
-  title: "Controlar",
+  title: "5. Controlar",
+  link:"Controlar",
   description:
   "Después de realizado el proyecto se da una retroalimentación tanto grupal como individual.",
   icon: "bx:bxs-file-find",
 },
 {
-  title: "Valorar",
+  title: "6. Valorar",
+  link:"Valorar",
   description:
   "Se hace una valoración de todo lo que se llevo cabo, tanto éxito como fracasos para dar puntos de mejora.",
   icon: "bx:bxs-user",
@@ -61,7 +67,7 @@ const features = [
       <div>
           <div class="flex justify-between">
             <h3 class="font-semibold text-lg">{item.title}</h3>{" "}
-            <a class="bg-white hover:bg-gray-100 text-gray-800 font-semibold p-1 border border-gray-400 rounded shadow">ver más</a >
+            <a href={"steps/"+item.link} class="bg-white hover:bg-gray-100 text-gray-800 font-semibold p-1 border border-gray-400 rounded shadow">ver más</a >
           </div>
 
           <p class="text-slate-500 mt-2 leading-relaxed">{item.description}</p>
