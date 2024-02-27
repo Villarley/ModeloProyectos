@@ -1,10 +1,13 @@
 ---
-import { Image } from "@astrojs/image/components";
-import heroImage from "assets/hero.png";
+import projects from "../assets/projects.jpg";
 import Link from "@components/ui/link.astro";
+// import { Picture } from "astro:assets";
+import heroImage from "assets/hero.png";
 ---
 
 <main class="grid lg:grid-cols-2 place-items-center pt-16 pb-8 md:pt-8">
+  <div class="py-6 md:order-1 hidden md:block">
+    <!-- <img src={projects} alt="Projects"/> --> 
   </div>
   <div>
     <h1 class="text-5xl lg:text-6xl xl:text-7xl font-bold lg:tracking-tight">
@@ -18,13 +21,13 @@ import Link from "@components/ui/link.astro";
         href="#"
         href="https://web3templates.com/"
         target="_blank"
-        rel="noopener">Mira el video</Link
+        rel="noopener">Video explicativo del paso a paso</Link
       >
       <Link
         size="lg"
         style="outline"
         rel="noopener"
-        href="https://github.com/surjithctly/astroship"
+        href={"/manual.pdf"}
         target="_blank">Ver documento</Link
       >
     </div>
