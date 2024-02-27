@@ -19,7 +19,7 @@ import react from "@astrojs/react";
 
 // https://astro.build/config
 export default defineConfig({
-  site:"https://Villarley.github.io",
+  site:"https://Villarley.github.io/ModeloProyectos",
   base:"/ModeloProyectos/",
   integrations: [tailwind(), alpinejs(), image(), mdx(), react()]
 });
