@@ -3,33 +3,7 @@ import Container from "@components/container.astro";
 import Link from "@components/ui/link.astro";
 import Dropdown from "./dropdown.astro";
 
-const menuitems = [
-  {
-    title: "Features",
-    path: "#",
-    children: [
-      { title: "Action", path: "#" },
-      { title: "Another action", path: "#" },
-      { title: "Dropdown Submenu", path: "#" },
-    ],
-  },
-  {
-    title: "Pricing",
-    path: "/pricing",
-  },
-  {
-    title: "About",
-    path: "/about",
-  },
-  {
-    title: "Blog",
-    path: "/blog",
-  },
-  {
-    title: "Contact",
-    path: "/contact",
-  },
-];
+const menuitems = [];
 ---
 
 <Container>
@@ -96,10 +70,6 @@ const menuitems = [
           ))
         }
       </ul>
-      <div class="lg:hidden flex items-center mt-3 gap-4">
-        <Link href="#" style="muted" block size="md">Log in</Link>
-        <Link href="#" size="md" block>Sign up</Link>
-      </div>
     </nav>
   </header>
 </Container>
